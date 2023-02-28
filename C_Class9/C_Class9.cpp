@@ -1,10 +1,18 @@
 ﻿#include <iostream>
 #include "Class.h"
+#include "SetStrategy.h"
 using namespace std;
 
 int main() 
 {
-    SortStrategy* stragega;
+    SortedArray ar;
+
+    BubbleSort bubble;
+    ar.SetSortStrategy(&bubble);
+    ar.Sort();
+
+
+    /*SortStrategy* stragega;
     stragega = new BubbleSort();
     
     int size = 10;
@@ -15,5 +23,5 @@ int main()
     for (int i = 0; i < size; i++)
     {
         cout << arr[i] << " ";
-    }
+    }*/
 }
